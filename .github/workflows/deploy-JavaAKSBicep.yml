@@ -62,6 +62,7 @@ jobs:
         template: ./infra/aks-bicep/modules/hub_network.bicep
         parameters: >
           ./infra/aks-bicep/action_params/hub_network.parameters.json
+          location="${{ env.LOCATION }}"
           hubVnetName="${{ env.HUB_VNET }}"
         deploymentName: hub-networking-github-actions
 
