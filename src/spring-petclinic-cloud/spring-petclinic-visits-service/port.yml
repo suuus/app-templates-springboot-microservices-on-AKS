@@ -1,0 +1,10 @@
+identifier: spring-petclinic-visits-service
+title: Petclinic visits service
+blueprint: microservices
+properties:
+  servicename: visits-service
+relations:
+  mySingleRelation: spring-petclinic-customers-service
+  myManyRelation:
+    - spring-petclinic-api-gateway
+    - spring-petclinic-vets-service
