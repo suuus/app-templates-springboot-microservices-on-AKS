@@ -22,14 +22,14 @@ on:
       - '*.png'
 
 env:
-  LOCATION: 'eastus'
+  LOCATION: 'westeurope'
   HUB_VNET: 'hub-vnet'
-  HUB_RG: 'petclinic-hub-eastus'
-  SPOKE_RG: 'petclinic-spoke-eastus'
+  HUB_RG: 'petclinic-hub-westeurope'
+  SPOKE_RG: 'petclinic-spoke-westeurope'
   SPOKE_VNET: 'spoke-vnet'
   FW_PRIVATE_IP: '10.0.0.4'
   ROUTE_TABLE_NAME: 'aks-udr'
-  ACR_NAME: 'petclinicaksacraz'
+  ACR_NAME: 'petclinicaksport'
   CLUSTER_NAME: 'aksspoke'
   JUMPBOX_ADMIN_USER: 'aksadmin'
   JUMPBOX_ADMIN_PWD: 'aksadmin123**'
