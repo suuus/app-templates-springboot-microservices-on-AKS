@@ -50,8 +50,8 @@ jobs:
        uses: Azure/aks-set-context@v1
        with:
         creds: '${{ secrets.AZURE_CREDENTIALS }}' # Azure credentials
-        resource-group: '${{ SPOKE_RG}}'
-        cluster-name: '${{ CLUSTER_NAME }}'
+        resource-group: '${{ env.SPOKE_RG}}'
+        cluster-name: '${{ env.CLUSTER_NAME }}'
        id: login
      - name: checkout repo
        uses: actions/checkout@v2.3.4
