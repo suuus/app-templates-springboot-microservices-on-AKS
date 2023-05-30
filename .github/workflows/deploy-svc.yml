@@ -61,6 +61,7 @@ jobs:
         resource-group: ${{ env.SPOKE_RG }}
         name: ${{ env.CLUSTER_NAME }}
         action: deploy
+        private: true
         strategy: basic
         namespace: ${{ github.event.inputs.namespace }}
         manifests: |
