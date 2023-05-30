@@ -1,6 +1,6 @@
 identifier: spring-petclinic-visits-service
 title: Petclinic visits service
-blueprint: microservices
+blueprint: microservice
 properties:
   servicename: visits-service
 relations:
