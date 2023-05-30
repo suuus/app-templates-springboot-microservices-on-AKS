@@ -51,4 +51,4 @@ jobs:
         action: deploy
         strategy: basic
         manifests: |
-          src/spring-petclinic-cloud/k8s/${{ github.event.inputs.service }}-service-deployment.yaml
+          ${{ github.workspace }}/src/spring-petclinic-cloud/k8s/${{ github.event.inputs.service }}-service-deployment.yaml
