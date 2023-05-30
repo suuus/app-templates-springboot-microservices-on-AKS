@@ -6,7 +6,7 @@
     repo: https://github.com/suuus/app-templates-springboot-microservices-on-AKS/tree/main/src/spring-petclinic-cloud/spring-petclinic-visits-service
     link: http://20.31.1.137/#!/owners/12/pets/14/visits
   relations:
-    database: visits-db-mysql
+    service: visits-db-mysql
 - identifier: pets-service
   title: Petclinic pets service
   blueprint: microservice
@@ -15,7 +15,7 @@
     repo: https://github.com/suuus/app-templates-springboot-microservices-on-AKS/tree/main/src/spring-petclinic-cloud/spring-petclinic-pets-service
     link: http://20.31.1.137/#!/owners/12/pets/14
   relations:
-    database: pets-db-mysql
+    service: pets-db-mysql
 - identifier: vets-service
   title: Petclinic vets service
   blueprint: microservice
@@ -24,7 +24,7 @@
     repo: https://github.com/suuus/app-templates-springboot-microservices-on-AKS/tree/main/src/spring-petclinic-cloud/spring-petclinic-vets-service
     link: http://20.31.1.137/#!/vets
   relations:
-    database: vets-db-mysql
+    service: vets-db-mysql
 - identifier: customers-service
   title: Petclinic customers service
   blueprint: microservice
@@ -33,7 +33,7 @@
     repo: https://github.com/suuus/app-templates-springboot-microservices-on-AKS/tree/main/src/spring-petclinic-cloud/spring-petclinic-customers-service
     link: http://20.31.1.137/#!/owners
   relations:
-    database: customers-db-mysql
+    service: customers-db-mysql
 - identifier: customers-db-mysql
   title: pet clinic customers database
   blueprint: service
