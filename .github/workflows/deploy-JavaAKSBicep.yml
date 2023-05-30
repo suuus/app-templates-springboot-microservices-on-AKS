@@ -16,7 +16,7 @@ name: AKS Cluster Microservices with Enterprise Networking Architecture Deployme
 
 on:
   # Triggers the workflow on push events on the main branch
-  dispatch:
+  workflow_dispatch:
     branches: [ main ]
     paths-ignore:
       - '*.md'
