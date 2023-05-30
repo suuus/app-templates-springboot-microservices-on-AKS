@@ -35,7 +35,7 @@ env:
   FW_PRIVATE_IP: '10.0.0.4'
   ROUTE_TABLE_NAME: 'aks-udr'
   ACR_NAME: 'petclinicaksport'
-  CLUSTER_NAME: 'aksspoke'
+  CLUSTER_NAME: 'aks-petclinic'
   JUMPBOX_ADMIN_USER: 'aksadmin'
   JUMPBOX_ADMIN_PWD: 'aksadmin123**'
   
