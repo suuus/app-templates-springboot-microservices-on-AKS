@@ -1,0 +1,47 @@
+name: Service Deployment in Pet Clinic
+
+on:
+  # Triggers the workflow on push events on the main branch
+  workflow_dispatch:
+    branches: [ main ]
+    paths-ignore:
+      - '*.md'
+      - '*.png'
+    inputs:
+      namespace:
+        required: true
+        description: "Namespace for deploy"
+        type: string
+      environment:
+        required: true
+        default: production
+        description: "Environment to deploy service to"
+        type: string
+      port_payload:
+        required: true
+        description: "Port's payload, including details for who triggered the action and general context (blueprint, run id, etc...)"
+        type: string
+
+env:
+  LOCATION: 'westeurope'
+  HUB_VNET: 'hub-vnet'
+  HUB_RG: 'petclinic-hub-westeurope'
+  SPOKE_RG: 'petclinic-spoke-westeurope'
+  SPOKE_VNET: 'spoke-vnet'
+  FW_PRIVATE_IP: '10.0.0.4'
+  ROUTE_TABLE_NAME: 'aks-udr'
+  ACR_NAME: 'petclinicaksport'
+  CLUSTER_NAME: 'aksspoke'
+  JUMPBOX_ADMIN_USER: 'aksadmin'
+  JUMPBOX_ADMIN_PWD: 'aksadmin123**'
+  
+jobs:
+  deploy-service:
+    - uses: Azure/k8s-deploy@v4
+      with:
+         resource-group: ${{ env.SPOKE_RG }}
+         name: ${{ env.CLUSTER_NAME }}
+         action: deploy
+         strategy: basic
+         manifests: |
+           src/spring-petclinic-cloud/k8s/visits-service-deployment.yaml
