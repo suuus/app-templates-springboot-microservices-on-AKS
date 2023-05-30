@@ -41,7 +41,7 @@ env:
   
 jobs:
   deploy-service:
-    - uses: Azure/k8s-deploy@v4
+    - uses: Azure/k8s-deploy@v4.9
       with:
          resource-group: ${{ env.SPOKE_RG }}
          name: ${{ env.CLUSTER_NAME }}
