@@ -1,12 +1,3 @@
-- identifier: visits-service
-  title: Petclinic visits service
-  blueprint: microservice
-  properties:
-    description: service for all things booking a visit to the clinic
-    repo: https://github.com/suuus/app-templates-springboot-microservices-on-AKS/tree/main/src/spring-petclinic-cloud/spring-petclinic-visits-service
-    link: http://20.31.1.137/#!/owners/12/pets/14/visits
-  relations:
-    service: visits-db-mysql
 - identifier: pets-service
   title: Petclinic pets service
   blueprint: microservice
