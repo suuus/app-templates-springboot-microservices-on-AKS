@@ -12,6 +12,10 @@ on:
         required: true
         description: "Namespace for deploy"
         type: string
+      service:
+        required: true
+        description: "Service to deploy"
+        type: string
       environment:
         required: true
         default: production
@@ -44,4 +48,4 @@ jobs:
          action: deploy
          strategy: basic
          manifests: |
-           src/spring-petclinic-cloud/k8s/visits-service-deployment.yaml
+           src/spring-petclinic-cloud/k8s/${{ env.service }}-service-deployment.yaml
