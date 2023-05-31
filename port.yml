@@ -2,7 +2,7 @@
   title: Petclinic visits service
   blueprint: microservice
   properties:
-    description: clinic visit system
+    description: clinic visit system for pets
     repo: https://github.com/suuus/app-templates-springboot-microservices-on-AKS/tree/main/src/spring-petclinic-cloud/spring-petclinic-visits-service
     link: http://20.31.1.137/#!/owners/12/pets/14
   relations:
