@@ -1,3 +1,12 @@
+- identifier: visits-service
+  title: Petclinic visits service
+  blueprint: microservice
+  properties:
+    description: furry friend needs doctor
+    repo: https://github.com/suuus/app-templates-springboot-microservices-on-AKS/tree/main/src/spring-petclinic-cloud/spring-petclinic-visits-service
+    link: http://20.31.1.137/#!/owners/12/pets/14
+  relations:
+    service: pets-db-mysql
 - identifier: pets-service
   title: Petclinic pets service
   blueprint: microservice
