@@ -50,6 +50,13 @@ jobs:
        uses: Azure/azure-resource-login-action@v1.0.0
        with:
          creds: '${{ secrets.AZURE_CREDENTIALS }}' # Azure credentials
+     - uses: azure/use-kubelogin@v1
+       env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       with:
+          kubelogin-version: 'latest'
+          # Skip cache check? When set to "true", the action will always download the latest version of kubelogin.
+          skip-cache: 'true'
      - name: set AKS context
        uses: Azure/aks-set-context@v3
        with:
