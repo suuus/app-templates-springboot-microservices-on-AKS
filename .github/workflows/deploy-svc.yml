@@ -75,4 +75,4 @@ jobs:
         strategy: basic
         namespace: ${{ github.event.inputs.namespace }}
         manifests: |
-          ${{ github.workspace }}/src/spring-petclinic-cloud/k8s/${{ github.event.inputs.service }}-service-deployment.yaml
+          ${{ github.workspace }}/src/spring-petclinic-cloud/k8s/${{ github.event.inputs.service }}-deployment.yaml
