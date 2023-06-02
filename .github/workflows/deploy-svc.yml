@@ -48,6 +48,12 @@ jobs:
   deploy-service:
     runs-on: ubuntu-latest
     steps:
+     - name: Simple Split
+       uses: xom9ikk/split@v1.1
+       with:
+          string: ${{ github.event.inputs.namespace }}
+          separator: '-' 
+          limit: 0
      - name: Setup Kubekuttel
        uses: azure/setup-kubectl@v3
        id: install
@@ -78,6 +84,6 @@ jobs:
         action: deploy
         private-cluster: true
         strategy: basic
-        namespace: ${{ github.event.inputs.namespace }}
+        namespace: ${{ steps.split.outputs._0 }}
         manifests: |
           ${{ github.workspace }}/src/spring-petclinic-cloud/k8s/${{ github.event.inputs.service }}-deployment.yaml
