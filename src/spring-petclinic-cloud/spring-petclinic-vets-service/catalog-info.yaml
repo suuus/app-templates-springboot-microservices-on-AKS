@@ -22,4 +22,4 @@ spec:
   owner: Blue
   lifecycle: production
   consumesApi:
-    - resource:default/petclinic-api-gateway
+    - component:default/petclinic-api-gateway
