@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: petclinic-api-gateway
   description: |
-    Petclinic API v1.
+    Petclinic API gateway
   links:
     - title: Website
       url: http://http://20.31.1.137/#!/welcome
@@ -23,3 +23,41 @@ spec:
   lifecycle: production
   providesApi:
     - API:default/petclinic-api
+--
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: artist-api
+  description: Retrieve artist details
+spec:
+  type: openapi
+  lifecycle: production
+  owner: Blue
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: PetsClinic API
+      license:
+        name: MIT
+    servers:
+      - url: http://artist.spotify.net/v1
+    paths:
+      /vets:
+        get:
+          summary: List all vets
+      /pets:
+        get:
+          summary: List all registred pets
+        post:
+          summary: Add new pet
+      /customers:
+        get:
+          summary: List all customers
+        post:
+          summary: Add a customer
+      /visits:
+        get:
+          summary: List all visits
+        post:
+          summary: Plan a visit
