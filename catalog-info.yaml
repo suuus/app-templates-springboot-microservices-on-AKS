@@ -21,3 +21,10 @@ spec:
   type: Application
   owner: Blue
   lifecycle: production
+  dependsOn:
+    - resource:default/petclinic-visits-service
+    - resource:default/petclinic-customers-service
+    - resource:default/petclinic-vets-service    
+  consumesApi:
+    - resource:default/petclinic-api-gateway
+    
