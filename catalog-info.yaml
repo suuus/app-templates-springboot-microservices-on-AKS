@@ -24,7 +24,5 @@ spec:
   dependsOn:
     - resource:default/petclinic-visits-service
     - resource:default/petclinic-customers-service
-    - resource:default/petclinic-vets-service    
-  consumesApi:
-    - resource:default/petclinic-api-gateway
+    - resource:default/petclinic-vets-service
     
