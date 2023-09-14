@@ -22,6 +22,4 @@ spec:
   owner: Blue
   lifecycle: production
   providesApi:
-    - component:default/petclinic-customers-service
-    - component:default/petclinic-vets-service
-    - component:default/petclinic-visits-service
+    - API:default/petclinic-api
