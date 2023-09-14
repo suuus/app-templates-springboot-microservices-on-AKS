@@ -22,7 +22,7 @@ spec:
   owner: Blue
   lifecycle: production
   dependsOn:
-    - resource:petclinic-visits
+    - resource:default/petclinic-visits
     - resource:petclinic-customers
     - resource:petclinic-vets
     
