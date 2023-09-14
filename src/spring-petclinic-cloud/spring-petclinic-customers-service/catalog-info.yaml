@@ -21,3 +21,5 @@ spec:
   type: Microservice
   owner: Blue
   lifecycle: production
+  consumesApi:
+    - resource:default/petclinic-api-gateway
