@@ -23,6 +23,6 @@ spec:
   lifecycle: production
   dependsOn:
     - component:default/petclinic-visits
-    - resource:petclinic-customers
-    - resource:petclinic-vets
+    - component:default/petclinic-customers
+    - component:default/petclinic-vets
     
