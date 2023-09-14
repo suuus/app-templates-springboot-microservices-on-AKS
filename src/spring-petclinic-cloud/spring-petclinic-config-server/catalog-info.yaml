@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: petclinic-svc-config
+  description: |
+    Petclinic config server.
+  links:
+    - title: Website
+      url: http://http://20.31.1.137/#!/welcome
+    - title: Documentation
+      url: https://backstage.io/docs
+    - title: Storybook
+      url: https://backstage.io/storybook
+    - title: Discord Chat
+      url: https://discord.com/invite/EBHEGzX
+  annotations:
+    github.com/project-slug: suuus/app-templates-springboot-app-on-AKS
+    backstage.io/techdocs-ref: dir:.
+    lighthouse.com/website-url: https://backstage.io
+spec:
+  type: Service
+  owner: Blue
+  lifecycle: production
