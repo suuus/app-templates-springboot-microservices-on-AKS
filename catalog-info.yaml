@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Petclinic
+  name: Petclinic App
   description: |
     Petclinic is a booking app for vets.
   links:
@@ -18,6 +18,6 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     lighthouse.com/website-url: https://backstage.io
 spec:
-  type: service
+  type: Application
   owner: Blue
   lifecycle: production
